@@ -19,6 +19,8 @@ for i = 1:Ns
         archimedes_time(i)] = my_archimedes(N(i));
 end
 
+disp("Archimedes Computation is Finished!");
+
 %%% GREGORY LEIBNIZ %%%
 
 % initiate gregory_leibniz arrays
@@ -30,3 +32,19 @@ for i = 1:Ns
     [gregory_leibniz_pi(i), gregory_leibniz_error(i),...
         gregory_leibniz_time(i)] = my_gregory_leibniz(N(i));
 end
+
+disp("Gregory Leibniz Computation is Finished!");
+
+%%% MAHADVA LEIBNIZ %%%
+
+% initiate madhava_leibniz arrays
+mahadva_leibniz_pi = zeros(Ns, 1);
+mahadva_leibniz_error = zeros(Ns,1);
+mahadva_leibniz_time = zeros(Ns, 1);
+
+for i = 1:Ns
+    [mahadva_leibniz_pi(i), mahadva_leibniz_error(i),...
+        mahadva_leibniz_time(i)]  = my_mahadva_leibniz(N(i));
+end
+
+disp("Mahadva Leibniz Computation is Finished!");
