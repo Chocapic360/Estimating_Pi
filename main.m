@@ -48,3 +48,17 @@ for i = 1:Ns
 end
 
 disp("Mahadva Leibniz Computation is Finished!");
+
+%%% WALLIS %%%
+
+% initiate wallis arrays
+wallis_pi = zeros(Ns,1);
+wallis_error = zeros(Ns,1);
+wallis_time = zeros(Ns, 1);
+
+for i = 1:Ns
+    [wallis_pi(i), wallis_error(i),...
+        wallis_time(i)] = my_wallis(N(i));
+end
+
+disp("Wallis Computation is Finished");
