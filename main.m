@@ -61,4 +61,18 @@ for i = 1:Ns
         wallis_time(i)] = my_wallis(N(i));
 end
 
-disp("Wallis Computation is Finished");
+disp("Wallis Computation is Finished!");
+
+%%% Euler Approximation %%%
+
+% initiate euler arrays
+euler_pi = zeros(Ns,1);
+euler_error = zeros(Ns,1);
+euler_time = zeros(Ns,1);
+
+for i = 1:Ns
+    [euler_pi(i), euler_error(i),...
+        euler_time(i)] = my_euler(N(i));
+end
+
+disp("Euler Computation is Finished!");
