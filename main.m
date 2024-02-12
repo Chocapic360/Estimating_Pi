@@ -63,7 +63,7 @@ end
 
 disp("Wallis Computation is Finished!");
 
-%%% Euler Approximation %%%
+%%% EULER %%%
 
 % initiate euler arrays
 euler_pi = zeros(Ns,1);
@@ -76,3 +76,31 @@ for i = 1:Ns
 end
 
 disp("Euler Computation is Finished!");
+
+%%% NILAKANTHA %%%
+
+% initiate nilakantha arrays
+nilakantha_pi = zeros(Ns,1);
+nilakantha_error = zeros(Ns,1);
+nilakantha_time = zeros(Ns,1);
+
+for i = 1:Ns
+    [nilakantha_pi(i), nilakantha_error(i),...
+        nilakantha_time(i)] = my_nilakantha(N(i));
+end
+
+disp("Nilakantha Computation is Finished!");
+
+%%% BBP %%%
+
+% initiate bbp arrays
+bbp_pi = zeros(Ns,1);
+bbp_error = zeros(Ns,1);
+bbp_time = zeros(Ns,1);
+
+for i = 1:Ns
+    [bbp_pi(i), bbp_error(i),...
+        bbp_time(i)] = my_bbp(N(i));
+end
+
+disp("BBP Computation is Finished!");
