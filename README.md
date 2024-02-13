@@ -57,7 +57,3 @@ The Chudnovsky algorithm is a fast method for calculating the digits of Pi. It c
 ## Contributions
 
 Contributions to add more estimation methods or improve existing implementations are welcome! Please open a pull request with your changes.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
