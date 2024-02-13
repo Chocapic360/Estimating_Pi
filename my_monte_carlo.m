@@ -8,6 +8,6 @@ function [pi_est, error, time] = my_monte_carlo(N)
         end
     end
     pi_est = 4*(circle_counter/N);
-    time = toc;
     error = abs(pi-pi_est);
+    time = toc;
 end
