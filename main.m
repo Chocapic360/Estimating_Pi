@@ -125,3 +125,20 @@ end
 close(bar);
 
 disp("BBP Computation is Finished!");
+
+%%% MONTE CARLO %%%
+
+% initiate monte_carlo arrays
+monte_carlo_pi = zeros(Ns,1);
+monte_carlo_error = zeros(Ns,1);
+monte_carlo_time = zeros(Ns,1);
+
+bar = waitbar(0,'Monte Carlo Computing...');
+for i = 1:Ns
+    [monte_carlo_pi(i), monte_carlo_error(i),...
+        monte_carlo_time(i)] = my_monte_carlo(N(i));
+    waitbar(i/Ns);
+end
+close(bar);
+
+disp("Monte Carlo Computation is Finished!");
