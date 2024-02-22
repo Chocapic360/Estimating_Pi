@@ -1,9 +1,11 @@
 function [pi_est, error, time] = my_nilakantha(N)
     tic
-    syms a
-    fun = ((-1)^a)/(((2*a)+2)*((2*a)+3)*((2*a)+4));
-    v = symsum(fun,a,0,N);
-    pi_est = 3+4*v;
+    pi_est = 0;
+    for a = 1:N
+        fun = ((-1)^a)/(((2*a)+2)*((2*a)+3)*((2*a)+4));
+        pi_est = pi_est + fun;
+    end
+    pi_est = 3+4*pi_est;
     error = abs(pi-pi_est);
     time = toc;
 end
