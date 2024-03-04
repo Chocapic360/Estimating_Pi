@@ -142,3 +142,20 @@ end
 close(bar);
 
 disp("Monte Carlo Computation is Finished!");
+
+%%% CHUDNOVSKY (N is 0:100) %%%
+
+% initiate monte_carlo arrays
+chudnovsky_pi = zeros(100,1);
+chudnovsky_error = zeros(100,1);
+chudnovsky_time = zeros(100,1);
+
+bar = waitbar(0,'Chudnovsky Computing...');
+for i = 1:100
+    [chudnovsky_pi(i), chudnovsky_error(i),...
+        chudnovsky_time(i)] = my_chudnovsky(i);
+    waitbar(i/100);
+end
+close(bar);
+
+disp("Chudnovsky Computation is Finished!");
